@@ -1,0 +1,293 @@
+:root{
+    --azul:#1A2530;
+    --laranja:#E27634;
+    --amarelo:#EFC94C;
+    --vermelho:#DF4A4A;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Nunito,sans-serif;
+    color:var(--azul);
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:0 20px;
+}
+
+.topo{
+    background:var(--azul);
+    padding:18px 0;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    height:58px;
+}
+
+.btn-whats,
+.btn-ajuda{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#fff;
+    text-decoration:none;
+    border:1px solid var(--laranja);
+    padding:12px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn-whats img,
+.btn-ajuda img{
+    width:18px;
+    height:18px;
+}
+
+.btn-whats:hover,
+.btn-ajuda:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(226,118,52,.3);
+    background:var(--laranja);
+}
+
+.hero{
+    background:#f4f4f4;
+    padding:45px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 380px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.05;
+}
+
+.hero h1 span{
+    color:var(--laranja);
+}
+
+.linha{
+    width:90px;
+    height:4px;
+    background:var(--laranja);
+    margin:18px 0;
+}
+
+.hero p{
+    max-width:520px;
+}
+
+.marca{
+    text-align:right;
+}
+
+.marca img{
+    width:340px;
+    opacity:.06;
+}
+
+.servicos{
+    padding:45px 0;
+}
+
+.servicos h2{
+    text-align:center;
+    font-size:42px;
+}
+
+.linha-centro{
+    width:80px;
+    height:4px;
+    background:var(--laranja);
+    margin:15px auto;
+}
+
+.sub{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+/* TÍTULOS DAS ÁREAS */
+
+.servicos h3{
+    margin:35px 0 15px;
+}
+
+.titulo-previdencia{
+    color:var(--azul);
+    font-size:1.6rem;
+    font-weight:800;
+}
+
+.titulo-financeira{
+    color:var(--laranja);
+    font-size:1.6rem;
+    font-weight:800;
+}
+
+.titulo-educacao{
+    color:var(--amarelo);
+    font-size:1.6rem;
+    font-weight:800;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-bottom:20px;
+}
+
+/* CARDS */
+
+.card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    text-decoration:none;
+    color:inherit;
+
+    border:1px solid #eee;
+    border-left:4px solid var(--azul);
+
+    padding:24px;
+
+    border-radius:14px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+    gap:20px;
+
+    min-height:130px;
+
+    background:#fff;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.card-content{
+    flex:1;
+}
+
+.card-content strong{
+    display:block;
+    font-size:1.05rem;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    margin:0;
+    color:#666;
+    font-size:.95rem;
+    line-height:1.5;
+}
+
+.card span{
+    color:var(--laranja);
+    font-size:28px;
+    flex-shrink:0;
+    transition:.3s;
+}
+
+.card:hover span{
+    transform:translateX(6px);
+}
+
+.vermelho{
+    border-left-color:var(--vermelho);
+}
+
+.amarelo{
+    border-left-color:var(--amarelo);
+}
+
+/* BOX AJUDA */
+
+.ajuda{
+    background:#f5f5f5;
+    padding:24px;
+    border-radius:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+}
+
+.btn-ajuda{
+    background:var(--azul);
+    border:none;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:var(--azul);
+    color:#fff;
+    padding:35px 0;
+    margin-top:40px;
+}
+
+.rodape{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+    align-items:center;
+}
+
+.logo-footer{
+    height:45px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .hero-grid,
+    .rodape,
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .marca{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .logo{
+        height:42px;
+    }
+
+    .ajuda{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
